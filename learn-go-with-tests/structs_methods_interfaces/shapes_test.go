@@ -66,3 +66,67 @@ func TestAreaShape(t *testing.T) {
 	})
 
 }
+
+func TestTableDrivenTest(t *testing.T) {
+
+	areaTest := []struct {
+		shape Shape
+		want  float64
+	}{
+		{Rectangle{10.0, 10.0}, 100.0},
+		{Circle{10}, 314.1592653589793},
+	}
+
+	for _, tt := range areaTest {
+		got := tt.shape.Area()
+		if got != tt.want {
+			t.Errorf("got %g want %g", got, tt.want)
+		}
+
+	}
+
+}
+
+func TestTableDrivenTest1(t *testing.T) {
+
+	areaTest := []struct {
+		shape Shape
+		want  float64
+	}{
+		{Rectangle{10.0, 10.0}, 100.0},
+		{Circle{10}, 314.1592653589793},
+		{Triangle{12, 6}, 36.0},
+	}
+
+	for _, tt := range areaTest {
+		got := tt.shape.Area()
+		if got != tt.want {
+			t.Errorf("got %g want %g", got, tt.want)
+		}
+
+	}
+
+}
+
+func TestTableDrivenTest2(t *testing.T) {
+
+	areaTest := []struct {
+		name  string
+		shape Shape
+		want  float64
+	}{
+		{"Rectangle", Rectangle{10.0, 10.0}, 100.0},
+		{"Circle", Circle{10}, 314.1592653589793},
+		{"Triangle", Triangle{12, 6}, 36.0},
+	}
+
+	for _, tt := range areaTest {
+		t.Run(tt.name, func(t *testing.T) {
+			got := tt.shape.Area()
+			if got != tt.want {
+				t.Errorf("got %g want %g", got, tt.want)
+			}
+		})
+	}
+
+}
