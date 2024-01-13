@@ -1,4 +1,4 @@
-package array
+package array_slices
 
 func Sum1(numbers [5]int) int {
 
