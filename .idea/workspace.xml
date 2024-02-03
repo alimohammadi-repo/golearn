@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39e7b3bb-74d1-448c-aa5e-ccb0bc6de1d4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lets-go/snippetbox/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lets-go/snippetbox/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
   </component>
   <component name="GOROOT" url="file://$PROJECT_DIR$/../../tools/go1.21.5.windows-amd64/go" />
   <component name="Git.Settings">
@@ -29,7 +38,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
     "Go Build.go build learn-go-with-tests.executor": "Run",
+    "Go Build.go build snippetbox.alexedwards.net.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
@@ -45,7 +56,7 @@
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.go build snippetbox.alexedwards.net">
     <configuration name="go build learn-go-with-tests" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="golearn" />
       <working_directory value="$PROJECT_DIR$/learn-go-with-tests" />
@@ -55,8 +66,18 @@
       <filePath value="$PROJECT_DIR$/learn-go-with-tests/1_hello.go" />
       <method v="2" />
     </configuration>
+    <configuration name="go build snippetbox.alexedwards.net" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="golearn" />
+      <working_directory value="$PROJECT_DIR$/lets-go/snippetbox" />
+      <kind value="PACKAGE" />
+      <package value="snippetbox.alexedwards.net" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/lets-go/snippetbox/main.go" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build snippetbox.alexedwards.net" />
         <item itemvalue="Go Build.go build learn-go-with-tests" />
       </list>
     </recent_temporary>
