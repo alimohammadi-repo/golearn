@@ -57,9 +57,50 @@ func main() {
 	fmt.Println("Counter", e3.counter)
 	fmt.Println("Pi", e3.pi)
 
+	//Padding and Alignment
+
+	//If I need to minimize the amount of padding bytes, I must lay out the fields from
+	//highest allocation to lowest allocation. This will push any necessary padding bytes
+	//down to the bottom of the struct and reduce the total number of padding bytes
+	//necessary.
+
+	//type example struct {
+	//	pi float32
+	//} // 0xc000100020 <- Starting Address counter
+	//// int16 // 0xc000100024 <- 2 byte alignment
+	////flag bool // 0xc000100026 <- 1
+	////byte alignment
+	////flag2 bool // 0xc000100027 <- 1 byte alignment
+	////}
+
+	//Assigning Values
+
+	//var ex1 example
+	//var ex2 example1
+
+	//	ex1 = ex2  Not allowed, compiler error
+
+	//ex1 = example(ex2) Allowed, NO compiler error
+
+	//var ex2 struct {
+	//	flag    bool
+	//	counter int16
+	//	pi      float32
+	//}
+
+	// ex1=ex2 Allowed, NO need for conversion syntax
+
+	//Pointers
+
 }
 
 type example struct {
+	flag    bool
+	counter int16
+	pi      float32
+}
+
+type example1 struct {
 	flag    bool
 	counter int16
 	pi      float32
