@@ -66,8 +66,7 @@ func main() {
 
 	//type example struct {
 	//	pi float32
-	//} // 0xc000100020 <- Starting Address counter
-	//// int16 // 0xc000100024 <- 2 byte alignment
+	//} // 0xc000100020 <- Starting Address counter	//// int16 // 0xc000100024 <- 2 byte alignment
 	////flag bool // 0xc000100026 <- 1
 	////byte alignment
 	////flag2 bool // 0xc000100027 <- 1 byte alignment
@@ -91,7 +90,29 @@ func main() {
 	// ex1=ex2 Allowed, NO need for conversion syntax
 
 	//Pointers
+	//Pass By Value
 
+	count := 10
+	println("count:\tValue Of[", count, "]\tAddr Of[", &count, "]")
+
+	increment1(count)
+	println("count:\tValue Of[", count, "]\tAddr Of[", &count, "]")
+
+	increment2(&count)
+	println("count:\tValue Of[", count, "]\tAddr Of[", &count, "]")
+
+	//Escape Analysis
+
+}
+
+func increment1(inc int) {
+	inc++
+	println("inc1:\tValue Of[", inc, "]\tAddr Of[", &inc, "]")
+}
+
+func increment2(inc *int) {
+	*inc++
+	println("inc2:\tValue Of[", inc, "]\tAddr Of[", &inc, "]\tPoints To[", *inc, "]")
 }
 
 type example struct {
