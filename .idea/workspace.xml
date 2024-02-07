@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="39e7b3bb-74d1-448c-aa5e-ccb0bc6de1d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lets-go/snippetbox/cmd/web/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/lets-go/snippetbox/cmd/web/handlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lets-go/snippetbox/cmd/web/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/lets-go/snippetbox/cmd/web/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +48,7 @@
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
     "last_opened_file_path": "C:/Users/ali",
@@ -92,12 +92,19 @@
     <configuration name="go build snippetbox.alexedwards.net/cmd/web" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="golearn" />
       <working_directory value="$PROJECT_DIR$/lets-go/snippetbox" />
+      <parameters value="-addr=&quot;:8888&quot;" />
       <kind value="PACKAGE" />
       <package value="snippetbox.alexedwards.net/cmd/web" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/lets-go/snippetbox/cmd/web/main.go" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Go Build.go build language-mechanics.go" />
+      <item itemvalue="Go Build.go build learn-go-with-tests" />
+      <item itemvalue="Go Build.go build snippetbox.alexedwards.net" />
+      <item itemvalue="Go Build.go build snippetbox.alexedwards.net/cmd/web" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build snippetbox.alexedwards.net/cmd/web" />
