@@ -4,6 +4,7 @@ import (
 	"flag"
 	"log"
 	"net/http"
+	"os"
 )
 
 func main() {
@@ -15,14 +16,34 @@ func main() {
 
 	flag.Parse()
 
+	f, err1 := os.OpenFile("/tmp/info.log", os.O_RDWR|os.O_CREATE, 0666)
+
+	if err1 != nil {
+		log.Fatal(err1)
+	}
+	defer f.Close()
+
+	infoLog := log.New(f, "INFO\t", log.Ldate|log.Ltime)
+
+	errorLog := log.New(os.Stderr, "ERROR\t", log.Ldate|log.Ltime|log.Lshortfile)
+
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", home)
 	mux.HandleFunc("/snippet/view", snippetView)
 	mux.HandleFunc("/snippet/create", snippetCreate)
 
-	log.Print("Starting Server on %s", cfg.addr)
-	err := http.ListenAndServe(cfg.addr, mux)
-	log.Fatal(err)
+	infoLog.Printf("Starting Server on %s", cfg.addr)
+
+	srv := &http.Server{
+		Addr:     cfg.addr,
+		ErrorLog: errorLog,
+		Handler:  mux,
+	}
+
+	//err := http.ListenAndServe(cfg.addr, mux)
+
+	err := srv.ListenAndServe()
+	errorLog.Fatal(err)
 
 }
 
